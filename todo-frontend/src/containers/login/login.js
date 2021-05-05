@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {} from "react-bootstrap";
 
 class Login extends Component {
   constructor(props) {
@@ -18,17 +19,12 @@ class Login extends Component {
 
   render() {
     return (
-      <body>
-        <p>Login Screen</p>
+      <div>
+        <div className="container">
+          <p>Login Screen</p>
 
-        <button
-          onClick={() => {
-            this.openHome();
-          }}
-        >
-          Home
-        </button>
-      </body>
+        </div>
+      </div>
     );
   }
 }

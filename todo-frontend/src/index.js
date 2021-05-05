@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./containers/home";
-import Login from "./containers/login";
+import Login from "./containers/login/login";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
