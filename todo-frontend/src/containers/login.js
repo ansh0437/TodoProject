@@ -22,7 +22,7 @@ class Login extends Component {
   };
 
   submitClick = () => {
-    if (this.state.screen == "login") {
+    if (this.state.screen === "login") {
       this.validateLoginFields();
     } else {
       this.validateRegsiterFields();
@@ -41,7 +41,7 @@ class Login extends Component {
     this.props.history.push({
       pathname: "/home",
       state: {
-        data: this.state.fullName,
+        // data: this.state.fullName,
       },
     });
   };
@@ -72,7 +72,7 @@ class Login extends Component {
 
             <Card.Body>
               <Form>
-                {this.state.screen != "login" && (
+                {this.state.screen !== "login" && (
                   <Form.Group>
                     <Form.Label>Full Name</Form.Label>
                     <Form.Control
