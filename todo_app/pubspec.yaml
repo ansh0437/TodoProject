@@ -33,7 +33,7 @@ dependencies:
     sdk: flutter
 
   # Shared Preference
-  shared_preferences: ^0.5.7+3
+  shared_preferences: ^2.0.5
 
   # Provider
   provider: ^4.3.3
