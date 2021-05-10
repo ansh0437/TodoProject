@@ -30,7 +30,7 @@ void hideLoader() => EasyLoading.dismiss();
 
 /// TRUE - In case of Black box with White Text
 /// FALSE - In case of White box with Black Text
-void showToast(message, {darkTheme = false}) {
+void showToast(message, {darkTheme = true}) {
   _configLoader(darkTheme);
   EasyLoading.showToast(message,
       toastPosition: EasyLoadingToastPosition.bottom);

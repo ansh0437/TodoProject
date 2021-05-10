@@ -43,7 +43,8 @@ class Doubles {
   static const double ninety = 90.0;
   static const double ninetySix = 96.0;
   static const double hundred = 100.0;
-  static const double hundredTwenty = 120.0;
+  static const double oneTwenty = 120.0;
+  static const double oneSixty = 160.0;
   static const double twoHundred = 200.0;
   static const double twoForty = 240.0;
   static const double twoEighty = 280.0;
