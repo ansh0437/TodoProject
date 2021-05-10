@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/constants/colors.dart';
 import 'package:todo_app/constants/numbers.dart';
+import 'package:todo_app/constants/strings.dart';
 import 'package:todo_app/helpers/app_helper.dart';
 
 import '../base/base_stateful.dart';
@@ -13,6 +14,13 @@ class SplashPage extends BasePage {
 class _SplashPageState extends BaseState<SplashPage> {
   bool _isLoginScreenVisible = true;
 
+  TextEditingController _fullNameController =
+      TextEditingController(text: Strings.empty);
+  TextEditingController _emailController =
+      TextEditingController(text: Strings.empty);
+  TextEditingController _passwordController =
+      TextEditingController(text: Strings.empty);
+
   @override
   void initState() {
     super.initState();
@@ -20,6 +28,9 @@ class _SplashPageState extends BaseState<SplashPage> {
 
   void _tabClick(bool isLogin) {
     setState(() {
+      _fullNameController.clear();
+      _emailController.clear();
+      _passwordController.clear();
       _isLoginScreenVisible = isLogin;
     });
   }
@@ -30,9 +41,8 @@ class _SplashPageState extends BaseState<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = getWidth();
-    double height = getHeight();
-
+    // double width = getWidth();
+    // double height = getHeight();
     // printLog("width: $width, height: $height");
 
     return SafeArea(
@@ -137,18 +147,23 @@ class _SplashPageState extends BaseState<SplashPage> {
                                       margin:
                                           EdgeInsets.only(top: Doubles.sixteen),
                                       child: TextField(
+                                          controller: _fullNameController,
+                                          keyboardType: TextInputType.name,
                                           decoration: InputDecoration(
                                               labelText: "Full Name")),
                                     )),
                               Container(
                                   margin: EdgeInsets.only(top: Doubles.sixteen),
                                   child: TextField(
+                                      controller: _emailController,
+                                      keyboardType: TextInputType.emailAddress,
                                       decoration:
                                           InputDecoration(labelText: "Email"))),
                               Container(
                                   margin: EdgeInsets.only(top: Doubles.sixteen),
                                   child: TextField(
                                       obscureText: true,
+                                      controller: _passwordController,
                                       decoration: InputDecoration(
                                           labelText: "Password"))),
                               Container(
